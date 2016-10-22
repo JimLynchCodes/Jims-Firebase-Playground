@@ -1,0 +1,16 @@
+<p>
+  firebase-list works!
+</p>
+
+<h1>{{ (item | async)?.topic }}</h1>
+
+<input type="text" [(ngModel)]="textboxInput">
+
+<button (click)="savebuttonClicked()">Save</button>
+<br>
+
+<video id="video-player" [src]="image" controls autoplay></video>
+
+<!--<input type="file" id="upload" onchange="document.getElementById('fileResults').innerHTML = 'changed';" />-->
+<input type="file" id="upload" (change)=changeHandler(files) (ended)=videoEnded()/>
+
